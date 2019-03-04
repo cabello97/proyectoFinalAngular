@@ -1,0 +1,89 @@
+<section id="register" class="mb-5 mt-5">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+        <div class="card_register">
+          <div class="card">
+            <div class="card-body text-center">
+              <form #formRegister="ngForm" (ngSubmit)="onAddUser()">
+                <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+                <div class="alert alert-danger" role="alert" *ngIf="isError">
+                  {{msgError}}
+                </div>
+                <div class="form-group">
+                  <label><b>Email:</b></label>
+
+                  <input type="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="email" required
+                    minlength="8">
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="email.touched && !email.valid">
+                  <div *ngIf="email.errors.required">Email is required</div>
+                  <div *ngIf="email.errors.minlength">Email must be at least 8 characters</div>
+                </div>
+                <div class="form-group">
+                  <label><b>Contraseña:</b></label>
+
+                  <input type="password" name="password" class="form-control" placeholder="Password"
+                    [(ngModel)]="password" required minlength="5" maxlength="10">
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="password.touched && !password.valid">
+                  <div *ngIf="password.errors.required">Password is required</div>
+                  <div *ngIf="password.errors.minlength">Password must be at least 5 characters</div>
+                </div>
+              <hr>
+                <div class="form-group">
+                  <label><b>Nombre:</b></label>
+
+                  <input #nameUser id="nameUser" type="text" name="nameUser" class="form-control" placeholder="Name" [(ngModel)]="name" required>
+                </div>
+
+                <div class="form-group">
+                  <label><b>Sexo:</b></label>
+
+                  <div class="form-check">
+                    <input #sexoUser type="radio" name="sexo" class="form-control" value="Hombre" [(ngModel)]="sexo" required>
+                    <label class="form-check-label" for="hombre">Hombre</label>
+                  </div>
+                  <div class="form-check">
+                    <input #sexoUser type="radio" name="sexo" class="form-control" value="Mujer" [(ngModel)]="sexo" required>
+                    <label class="form-check-label" for="mujer">Mujer</label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label><b>Pais:</b></label>
+                  <select #paisUser class="custom-select my-1 mr-sm-2" name="pais">
+                    <option value="esp">España</option>
+                    <option value="ale">Alemania</option>
+                    <option value="fra">Francia</option>
+                    <option value="ita">Italia</option>
+                    <option value="ing">Inglaterra</option>
+                  </select>
+                </div>
+
+
+                <div class="form-group">
+                  <label><b>Aficiones:</b></label>
+                  <br>
+                  <label class="form-check-label"><input #afiUser class="form-check-input" type="checkbox" id="futbol"
+                      value="futbol" />Fútbol</label><br>
+                  <label class="form-check-label"><input #afiUser class="form-check-input" type="checkbox" id="cine"
+                      value="cine" />Cine</label><br>
+                  <label class="form-check-label"><input #afiUser class="form-check-input" type="checkbox" id="videojuegos"
+                      value="videojuegos" />Videojuegos</label>
+                </div>
+
+
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
+                <div class="form-group">
+                  <a routerLink="/user/login" class="form-control login-user">Do you have account?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
