@@ -7,9 +7,12 @@
             <div class="card-body text-center">
               <p><img class="img-fluid" src="{{book.portada}}" alt="{{book.titulo}}"></p>
               <h4 class="card-title">{{book.titulo}}</h4>
+              <p><b>Descripcion:</b></p>
               <p class="card-text">{{book.descripcion}}</p>
-              <a href="" target="_blanck" class="btn btn-block btn-primary">Comprar</a>
-            </div>
+              <p><b>Autor:</b> {{book.autor}}</p>
+              <p><b>Idioma:</b> {{book.idioma}}</p>
+              <p><b>Precio:</b> {{book.precio}} €</p>
+              <a href="{{book.link_amazon}}" class="btn btn-block btn-primary" target="_blank">Comprar</a>            </div>
           </div>
         </div>
       </div>

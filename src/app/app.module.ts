@@ -7,9 +7,7 @@ import { RegisterComponent } from './components/user/register/register.component
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HeroComponent } from './components/hero/hero.component';
 import { HomeComponent } from './components/home/home.component';
-import { OffersComponent } from './components/offers/offers.component';
 import { DetailsBookComponent } from './components/details-book/details-book.component';
 import { ListBooksComponent } from './components/admin/list-books/list-books.component';
 import { Page404Component } from './components/page404/page404.component';
@@ -30,9 +28,7 @@ import { ModalComponent } from './components/modal/modal.component';
     LoginComponent,
     ProfileComponent,
     NavbarComponent,
-    HeroComponent,
     HomeComponent,
-    OffersComponent,
     DetailsBookComponent,
     ListBooksComponent,
     Page404Component,

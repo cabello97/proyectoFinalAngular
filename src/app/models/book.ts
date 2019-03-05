@@ -7,4 +7,5 @@ export interface BookInterface{
     precio?: string;    
     autor?: string;
     oferta?: string;
+    link_amazon?: string;
 }

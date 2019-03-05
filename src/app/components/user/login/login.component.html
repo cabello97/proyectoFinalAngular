@@ -8,7 +8,7 @@
               <form #formLogin="ngForm" (submit)="onLogin()">
                 <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Login</h1>
                 <div class="alert alert-danger" role="alert" *ngIf="isError">
-                  Something is wrong!
+                  Algo ha salido mal!
                 </div>
                 <div class="form-group">
                   <input [(ngModel)]="email" type="email" id="email" name="email" class="form-control"
@@ -20,7 +20,7 @@
                 </div>
                 <button type="submit" class="btn btn-lg btn-primary btn-block">Login</button>
                 <div class="form-group">
-                  <a routerLink="/user/register" class="form-control login-user">Are you new ?</a>
+                  <a routerLink="/user/register" class="form-control login-user">¿Eres nuevo?</a>
                 </div>
               </form>
             </div>

@@ -1,9 +1,9 @@
 .main-section {
-    border: 1px solid #007bff;
+    border: 1px solid black;
     background: #fff;
   }
   .profile-header {
-    background: #007bff;
+    background: gray;
     height: 150px;
   }
   .user-detail {
